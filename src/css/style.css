@@ -1,0 +1,33 @@
+html {
+  font-family: "Noto Sans JP";
+}
+
+body {
+  padding: 50px;
+  padding-top: 10px;
+}
+
+#nav {
+  display: flex;
+}
+#nav span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+ul li {
+  display: flex;
+  margin: 5px;
+}
+ul li .complete {
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+.rightSide {
+  margin-left: auto;
+}/*# sourceMappingURL=style.css.map */
