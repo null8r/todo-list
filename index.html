@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og:https://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <link href="./src/css/style.css" rel="stylesheet">
+    
+    <title>ToDo List / Vue.js</title>
+  </head>
+
+  <body>
+    <div id="nav">
+      <span>ToDo List</span><a class="rightSide" href="https://github.com/null8r/todo-list" target="_blank">README</a>
+    </div>
+    
+    <div id="todo">
+      <p>NewTask : <input type="text" v-model="newTask" v-on:keyup.enter="addTodo()"><button v-on:click="addTodo()">Add</button></p>
+      <hr>
+      <ul>
+        <li v-for="todo in todos">
+          <input type="checkbox" v-model="todo.isCompleted"><span v-bind:class="{ 'complete': todo.isCompleted }">{{ todo.task }}</span><button class="rightSide" v-on:click="deleteTodo(todo)">Delete</button>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="./src/main.js"></script>
+
+    <noscript>
+      
+    </noscript>
+  </body>
+</html>
