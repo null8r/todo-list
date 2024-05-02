@@ -1,11 +1,11 @@
-new Vue({
-  el: "#todo",
-  data: {
-    newTask: "",
-    todos: [
-      { task: "example1", isCompleted: false },
-      { task: "example2", isCompleted: false }
-    ]
+Vue.createApp({
+  data() {
+    return {
+      todos: [
+        { task: "example1", isCompleted: false },
+        { task: "example2", isCompleted: false }
+      ]
+    }
   },
   methods: {
     addTodo: function(){
@@ -25,4 +25,4 @@ new Vue({
       }
     }
   }
-});
+}).mount('#todo');
